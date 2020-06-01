@@ -28,7 +28,7 @@ encoders.encode_base64(part)
 
 # Add header
 part.add_header("Content-Disposition",
-                f"attachment; filename = {filename}"
+                "attachment", filename = filename
 )
 
 # Create the container email EmailMessage
