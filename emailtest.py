@@ -12,11 +12,12 @@ message = """\
 Subject: Hi there
 
 This message is sent from Python."""
-
+#try:
 with smtplib.SMTP(smtp_server,port,timeout=20) as server:
-    # SMTP automatically tries ESMTP EHLO first when there are no previous EHLO or HELO command in the session.
+# SMTP automatically tries ESMTP EHLO first when there are no previous EHLO or HELO command in the session.
     server.starttls()
     server.login("tanyuhao@hotmail.com", password)
     server.sendmail(sender_email, receiver_email, message)
     print('Sent email successfully')
-except Exception as e: print(e)
+#except Exception as e:
+#    print(str(e))
